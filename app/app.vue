@@ -1,10 +1,8 @@
-<script lang="ts" setup>
-const variable = ref<string>('Click me');
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <UApp>
     <NuxtRouteAnnouncer />
-    <UButton>{{ variable }}</UButton>
+    <NuxtPage />
   </UApp>
 </template>
