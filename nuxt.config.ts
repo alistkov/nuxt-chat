@@ -12,4 +12,8 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  // imports: {
+  //   scan: false, // Disable auto import for composables and utils
+  // },
 });
