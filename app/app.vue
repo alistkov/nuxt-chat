@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const variable = ref<string>("Click me");
+const variable = ref<string>('Click me');
 </script>
 
 <template>
