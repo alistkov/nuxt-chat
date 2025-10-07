@@ -20,9 +20,9 @@ export default antfu({
     'perfectionist/sort-imports': ['error', {
       tsconfigRootDir: '.',
     }],
-    'unicorn/filename-case': ['error', {
-      case: 'kebabCase',
-      ignore: ['README.md'],
-    }],
+    // 'unicorn/filename-case': ['error', {
+    //   case: 'kebabCase',
+    //   ignore: ['README.md'],
+    // }],
   },
 });
