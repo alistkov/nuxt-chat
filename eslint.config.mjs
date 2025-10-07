@@ -24,5 +24,8 @@ export default antfu({
     //   case: 'kebabCase',
     //   ignore: ['README.md'],
     // }],
+    'vue/custom-event-name-casing': ['error', 'kebab-case', {
+      ignores: [],
+    }],
   },
 });

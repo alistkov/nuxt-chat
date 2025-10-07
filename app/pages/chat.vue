@@ -3,9 +3,5 @@
 </script>
 
 <template>
-  <h1>This is chat</h1>
+  <ChatWindow />
 </template>
-
-<style>
-
-</style>
