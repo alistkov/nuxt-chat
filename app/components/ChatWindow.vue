@@ -1,10 +1,14 @@
 <script lang="ts" setup>
-const scrollContainer = ref('scrollContainer');
+const { showScrollButton, scrollToBottom, pinToBottom, scrollContainer }
+  = useChatScroll();
+
 const { chat, messages, sendMessage } = useChat();
 
 function handleSendMessage(message: string) {
   sendMessage(message);
 }
+
+watch(() => messages.value, pinToBottom, { deep: true });
 </script>
 
 <template>
@@ -42,6 +46,16 @@ function handleSendMessage(message: string) {
         </div>
 
         <div class="message-form-container">
+          <div class="scroll-to-bottom-button-container">
+            <UButton
+              v-if="showScrollButton"
+              color="neutral"
+              variant="outline"
+              icon="i-heroicons-arrow-down"
+              class="rounded-full shadow-sm"
+              @click="() => scrollToBottom()"
+            />
+          </div>
           <ChatInput @send-message="handleSendMessage" />
         </div>
       </template>
